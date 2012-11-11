@@ -1,0 +1,15 @@
+#!/bin/sh
+
+case $1 in
+   config)
+        cat <<'EOM'
+graph_args --upper-limit 100 -l 0
+graph_title title
+graph_vlabel %
+value.label %
+EOM
+        exit 0;;
+esac
+
+echo -n "value.value "
+cat /home/user/value.txt
